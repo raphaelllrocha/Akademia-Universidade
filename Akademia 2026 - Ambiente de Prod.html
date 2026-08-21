@@ -1,0 +1,171 @@
+<!-- ===========================================================================
+     BLOCO DE HTML — Documentos para Corretores
+     Cole tudo (do <style> ao </script>) dentro de um bloco de HTML do site.
+     Para cadastrar documentos, edite só a lista em AKAD_DOCS, no final.
+     =========================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Open+Sans:wght@400;600;700&display=swap">
+
+<style>
+.akdocs{--mg:#DA0A5B;--mgd:#AE0849;--nv:#18365F;--ice:#F0F6FF;--g6:#4A5568;--g5:#718096;--g3:#CBD5E0;--bd:#E2E8F0;font-family:"Open Sans",system-ui,sans-serif;color:var(--g6);max-width:1180px;margin:0 auto;padding:8px 0 24px;box-sizing:border-box}
+.akdocs *,.akdocs *::before,.akdocs *::after{box-sizing:border-box}
+.akdocs-bar{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;margin:0 0 20px}
+.akdocs-f{display:flex;flex-direction:column;gap:6px;flex:1 1 240px;min-width:200px;max-width:300px}
+.akdocs-f label{font-family:"Poppins",sans-serif;font-size:13px;font-weight:600;color:var(--nv)}
+.akdocs-f select{appearance:none;width:100%;min-height:44px;padding:11px 38px 11px 14px;border:1px solid var(--bd);border-radius:10px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2318365F' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;font:inherit;font-size:15px;color:var(--nv);cursor:pointer}
+.akdocs-f select:focus{outline:none;border-color:var(--mg);box-shadow:0 0 0 3px rgba(218,10,91,.18)}
+.akdocs-clear{min-height:44px;padding:11px 16px;border:none;border-radius:999px;background:transparent;font-family:"Poppins",sans-serif;font-size:14px;font-weight:600;color:var(--nv);cursor:pointer}
+.akdocs-clear:hover{background:#EDF1F7}
+.akdocs-count{margin:0 0 16px;font-size:14px;color:var(--g5)}
+.akdocs-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.akdocs-card{height:100%;display:flex;gap:16px;padding:16px;background:#fff;border:1px solid var(--bd);border-radius:16px;box-shadow:0 1px 2px rgba(24,54,95,.05);transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+.akdocs-card:hover{box-shadow:0 12px 28px rgba(24,54,95,.12);transform:translateY(-3px);border-color:var(--g3)}
+.akdocs-thumb{flex:0 0 auto;width:92px;height:122px;border-radius:10px;overflow:hidden;background:var(--ice);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center}
+.akdocs-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.akdocs-thumb svg{width:28px;height:28px;opacity:.3}
+.akdocs-body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:8px}
+.akdocs-tags{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.akdocs-tipo{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mgd);background:rgba(218,10,91,.08);padding:4px 9px;border-radius:999px}
+.akdocs-prod{font-size:12px;font-weight:600;color:var(--g5)}
+.akdocs-card h3{margin:0;font-family:"Poppins",sans-serif;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em;color:var(--nv);text-wrap:pretty}
+.akdocs-desc{margin:0;font-size:13px;line-height:1.5;color:var(--g5);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.akdocs-metas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--g5)}
+.akdocs-cta{margin-top:auto;padding-top:6px}
+.akdocs-cta a,.akdocs-cta span{display:inline-flex;align-items:center;min-height:40px;padding:9px 20px;border-radius:999px;font-family:"Poppins",sans-serif;font-size:14px;font-weight:600;text-decoration:none}
+.akdocs-cta a{border:1.5px solid var(--mg);color:var(--mg);transition:background .16s ease,color .16s ease}
+.akdocs-cta a:hover{background:var(--mg);color:#fff}
+.akdocs-cta span{border:1.5px dashed var(--g3);color:var(--g5)}
+.akdocs-empty{text-align:center;padding:56px 24px;background:var(--ice);border:1px solid var(--bd);border-radius:16px}
+.akdocs-empty h3{margin:0 0 10px;font-family:"Poppins",sans-serif;font-weight:600;font-size:20px;color:var(--nv)}
+.akdocs-empty p{margin:0 0 20px;font-size:15px;color:var(--g5)}
+.akdocs-empty button{min-height:44px;padding:12px 26px;border:none;border-radius:999px;background:var(--mg);color:#fff;font-family:"Poppins",sans-serif;font-size:15px;font-weight:600;cursor:pointer}
+.akdocs-empty button:hover{background:var(--mgd)}
+@media (max-width:640px){.akdocs-thumb{width:74px;height:98px}}
+</style>
+
+<div class="akdocs" id="akdocs">
+  <div class="akdocs-bar">
+    <div class="akdocs-f">
+      <label for="akdocs-tipo">Tipo de conteúdo</label>
+      <select id="akdocs-tipo"></select>
+    </div>
+    <div class="akdocs-f">
+      <label for="akdocs-produto">Produto</label>
+      <select id="akdocs-produto"></select>
+    </div>
+    <button type="button" class="akdocs-clear" id="akdocs-limpar" hidden>× Limpar filtros</button>
+  </div>
+  <p class="akdocs-count" id="akdocs-count" aria-live="polite"></p>
+  <ul class="akdocs-grid" id="akdocs-grid"></ul>
+  <div class="akdocs-empty" id="akdocs-vazio" hidden>
+    <h3>Nenhum documento foi encontrado com os filtros selecionados.</h3>
+    <p>Volte para a listagem completa de documentos.</p>
+    <button type="button" onclick="document.getElementById('akdocs-limpar').click()">Limpar filtros</button>
+  </div>
+</div>
+
+<script>
+/* ---------------------------------------------------------------------------
+   LISTA DE DOCUMENTOS
+   Copie um bloco { ... }, cole antes do  ];  e troque os textos.
+   tipo: escreva exatamente "Condições Gerais", "Questionário de Risco"
+         ou "Materiais de Risco".
+   capa: aceita "capa" ou "capaUrl".
+   url / capa vazios: o card mostra "Link em atualização" / capa padrão.
+   Opcionais: descricao, susep, data ("2026-03-14"), formato, tamanho.
+   --------------------------------------------------------------------------- */
+var AKAD_DOCS = [
+
+  { titulo: "Questionário de Risco – RC Geral Obras", produto: "Responsabilidade Civil", tipo: "Questionário de Risco", url: "", capaUrl: "https://44663813.fs1.hubspotusercontent-na1.net/hubfs/44663813/akad-akademia-questionario-risco-rc-geral-obras-550x1080.png" },
+
+  { titulo: "Condições Gerais – Seguro Garantia", produto: "Garantia", tipo: "Condições Gerais", url: "", capa: "" },
+
+  { titulo: "Questionário de Risco – Seguro Garantia", produto: "Garantia", tipo: "Questionário de Risco", url: "", capa: "" },
+
+  { titulo: "Condições Gerais – Seguro de Transporte", produto: "Transporte", tipo: "Condições Gerais", url: "", capa: "" },
+
+  { titulo: "Questionário de Risco – Transporte de Cargas", produto: "Transporte", tipo: "Questionário de Risco", url: "", capa: "" },
+
+  { titulo: "Materiais de Risco – Prevenção de Incêndio", produto: "Empresarial", tipo: "Materiais de Risco", url: "", capa: "" },
+
+  { titulo: "Condições Gerais – Cyber", produto: "Cyber", tipo: "Condições Gerais", url: "", capa: "" },
+
+  { titulo: "Materiais de Risco – Segurança Cibernética na Empresa", produto: "Cyber", tipo: "Materiais de Risco", url: "", capa: "" },
+
+  { titulo: "Questionário de Risco – Responsabilidade Civil Geral", produto: "Responsabilidade Civil", tipo: "Questionário de Risco", url: "", capa: "" },
+
+];
+
+(function () {
+  var TIPOS = ["Condições Gerais", "Questionário de Risco", "Materiais de Risco"];
+  var TODOS_T = "Todos os tipos", TODOS_P = "Todos os produtos";
+  var selT = document.getElementById("akdocs-tipo"),
+      selP = document.getElementById("akdocs-produto"),
+      btn = document.getElementById("akdocs-limpar"),
+      grid = document.getElementById("akdocs-grid"),
+      vazio = document.getElementById("akdocs-vazio"),
+      count = document.getElementById("akdocs-count");
+  var ICONE = '<svg viewBox="0 0 24 24" fill="none" stroke="#18365F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>';
+
+  function esc(v) {
+    return String(v == null ? "" : v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function dataBr(iso) {
+    var p = String(iso || "").split("-");
+    return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : String(iso || "");
+  }
+  function preencher(sel, opcoes) {
+    sel.innerHTML = opcoes.map(function (o) { return '<option value="' + esc(o) + '">' + esc(o) + "</option>"; }).join("");
+  }
+
+  var produtos = AKAD_DOCS.map(function (d) { return d.produto; })
+    .filter(function (p, i, a) { return p && a.indexOf(p) === i; })
+    .sort(function (a, b) { return a.localeCompare(b, "pt-BR"); });
+
+  preencher(selT, [TODOS_T].concat(TIPOS));
+  preencher(selP, [TODOS_P].concat(produtos));
+
+  function render() {
+    var t = selT.value, p = selP.value;
+    var lista = AKAD_DOCS.filter(function (d) {
+      return (t === TODOS_T || d.tipo === t) && (p === TODOS_P || d.produto === p);
+    }).sort(function (a, b) { return String(a.titulo).localeCompare(String(b.titulo), "pt-BR"); });
+
+    btn.hidden = t === TODOS_T && p === TODOS_P;
+    count.textContent = lista.length === 1 ? "1 documento encontrado" : lista.length + " documentos encontrados";
+    vazio.hidden = lista.length > 0;
+    grid.hidden = lista.length === 0;
+
+    grid.innerHTML = lista.map(function (d) {
+      var metas = [];
+      var susep = d.susep || d.processoSusep, dt = d.data || d.dataAtualizacao;
+      var capaSrc = String(d.capa || d.capaUrl || "").trim();
+      if (susep) metas.push("Processo SUSEP " + susep);
+      if (dt) metas.push("Atualizado em " + dataBr(dt));
+      if (d.formato) metas.push(d.formato);
+      if (d.tamanho) metas.push(d.tamanho);
+      var capa = capaSrc
+        ? '<img src="' + esc(capaSrc) + '" alt="Capa do documento ' + esc(d.titulo) + '" loading="lazy">'
+        : ICONE;
+      var cta = d.url && d.url !== "#"
+        ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">Acessar documento</a>'
+        : "<span>Link em atualização</span>";
+      return '<li><article class="akdocs-card">' +
+        '<div class="akdocs-thumb">' + capa + "</div>" +
+        '<div class="akdocs-body">' +
+          '<div class="akdocs-tags"><span class="akdocs-tipo">' + esc(d.tipo) + '</span><span class="akdocs-prod">' + esc(d.produto) + "</span></div>" +
+          "<h3>" + esc(d.titulo) + "</h3>" +
+          (d.descricao ? '<p class="akdocs-desc">' + esc(d.descricao) + "</p>" : "") +
+          (metas.length ? '<ul class="akdocs-metas"><li>' + metas.map(esc).join("</li><li>") + "</li></ul>" : "") +
+          '<div class="akdocs-cta">' + cta + "</div>" +
+        "</div></article></li>";
+    }).join("");
+  }
+
+  selT.addEventListener("change", render);
+  selP.addEventListener("change", render);
+  btn.addEventListener("click", function () { selT.value = TODOS_T; selP.value = TODOS_P; render(); });
+  render();
+})();
+</script>
